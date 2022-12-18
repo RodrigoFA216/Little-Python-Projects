@@ -27,9 +27,22 @@ file.close
 
 #Opcion 2
 #abrir el archivo con un pseudónimo (cuando terminas de usarlo se cierra automáticamente)
-with open('ejemplo2.txt','r') as archivo:
+Names=[]
+with open('Prueba.txt','r') as archivo:
     lineas=archivo.readlines()
-    print(lineas)
+print(lineas)
+for line in lineas:
+    x=line.count(" ")
+    print(x)
+    y=line.replace(" ","",x)
+    Names.append(y.strip("\n\t"))
+print(Names)
+Result=""
+for line in Names:
+    Result=Result+line
+print(Result)
+
+
 
 print(lineas) #esto o:
 """for l in lineas:

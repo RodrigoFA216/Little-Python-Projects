@@ -144,20 +144,19 @@ class Huffman: # declaracion de variables para la creacion del arbol de Huffman
 
 if __name__=="__main__":
     
-    print "INGRESAR LOS SIMBOLOS O UN MENSAJE QUE DESEA COMPRIMIR:"
-    print " " 
+    print ("INGRESAR LOS SIMBOLOS O UN MENSAJE QUE DESEA COMPRIMIR:")
+    print (" " )
     mensaje = raw_input()
-    print " "
+    print (" ")
 
-    print "NUMERO TOTAL DE SIMBILOS O BITS INTRODUCIDOS PARA SER ENVIADOS:  %s" % (len(mensaje))
-    print " "
-    print "[ 1 PASO]: NUMERO DE SIMBOLOS O BITS, ERRADOS O REPETIDOS "
-    print " "
+    print ("NUMERO TOTAL DE SIMBILOS O BITS INTRODUCIDOS PARA SER ENVIADOS:  %s" % (len(mensaje)))
+    print (" ")
+    print ("[ 1 PASO]: NUMERO DE SIMBOLOS O BITS, ERRADOS O REPETIDOS ")
+    print (" ")
     simbolos=''
     probabilidad=[]
     msm=mensaje
     d=0
-    
     for i in mensaje:
         if i in msm:
             print i,"=",int ( msm.count(i))
@@ -165,7 +164,6 @@ if __name__=="__main__":
             probabilidad.append(float(float ( msm.count(i))/float(len(mensaje))))
             msm=msm.replace(i,'')
             d+= 1
-         
     symbols=dict(zip(simbolos, probabilidad))
     print " "
     print "NUMERO DE SIMBOLOS COMPRIMIDOS=",d
