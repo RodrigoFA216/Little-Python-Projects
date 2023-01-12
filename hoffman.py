@@ -170,6 +170,9 @@ if __name__=="__main__":
     # decoded = huffman.decode(data)
     # print ("El codigo binario a decodificar es: \n", data)
     # print ("\n\nEL mensaje decodificado es:\n%s" % (data))
+    with open('Comprimido.txt', 'w') as archivo:
+        archivo.write(encoded)
+    print("\n\nel archivo ha sido generado con éxito, dentro puede encontrar la codificación\n\n")
     tiempo_final= time()
     tiempo_ejecucion= tiempo_final - tiempo_inicial
     print ('\n\nEL tiempo de transmision es: ', tiempo_ejecucion)
